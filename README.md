@@ -1,6 +1,6 @@
 Death Note
 
-libreta de comandos bash para linux
+Libreta de comandos bash para linux
 
 recopilacion de comandos BASH de sistema, aun no finalizado con errores...
 
@@ -11,5 +11,6 @@ shell--> generador de shellcodes para intel y arm (c as objdump grep )
 api -->llamadas a api usando socket bash y openssl (experimental pero funciona)
 wpa --> aun no terminado iw crunch aircrack (posiblemente agregue KRACK con scapy)
 
+
 y otros...
-# prueba
+
