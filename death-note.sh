@@ -177,6 +177,7 @@ do
 
  #encriptacion sha-256 md5 base-64****************************************************************************************   
      enc) 
+          
           printf "\t$red[256]$normal    Generador de hash sha256-->\n"
           printf "\t$red[512]$normal    Generador de hash sha512 -->\n"
           printf "\t$red[md5]$normal    Generador de hash md5 -->\n"
@@ -184,6 +185,7 @@ do
           printf "\t$red[b64d]$normal   Generador de hash base 64 decode -->\n"
           printf "\t$red[aese]$normal   Generador de hash openssl aes encode-->\n"
           printf "\t$red[aesd]$normal   Generador de hash openssl aes decode -->\n"
+          printf "\t$red[rsa]$normal    ssh-keygen hash para github -->\n"
           
           echo -n "Entrar opcion [*]:"
           
@@ -238,7 +240,15 @@ do
            printf "Listo pulsar enter :) \n"
            read;;
            
-           
+           rsa) 
+           path=${PWD}"/ssh/"
+                printf "ingrese su email-->"
+                read email
+                printf "ingrese key usado de pashfrase-->"
+                read key
+                ssh-keygen -N "" -t rsa -C $email -f $path$key
+                cat $path$key.pub
+                read;;
            
            
           esac;;
@@ -452,10 +462,6 @@ do
 #*******************************************************************************************************************************            
     9)
       gcc -dumpmachine      
-      
-      
-    
-    
       read;;
       
     10)
@@ -463,6 +469,24 @@ do
        cat /proc/cpuinfo
        read;;
    
+    git)
+    
+    #inicio
+    echo "# prueba" >> README.md
+    git init
+    git add README.md
+    git commit -m "first commit"
+    git remote add origin git@github.com:pablinn/death-note.git
+    git push -u -f origin master
+
+    #update
+    git add file
+    git commit -m "first commit"
+    #git remote add origin git@github.com:pablinn/death-note.git
+    git push -f origin master
+
+
+    read;;
     
     22)
         printf "Ingrese plataforma windows linux arm android -->" 
