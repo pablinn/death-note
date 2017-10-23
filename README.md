@@ -12,3 +12,4 @@ api -->llamadas a api usando socket bash y openssl (experimental pero funciona)
 wpa --> aun no terminado iw crunch aircrack (posiblemente agregue KRACK con scapy)
 
 y otros...
+# prueba
