@@ -503,11 +503,14 @@ do
                         git push -f origin master
                         read;;
                    g-ini)
+                   
+                        printf "Ingrese la carpeta a generar git -->" 
+                        read folder 
                         echo "# prueba" >> README.md
                         git init
                         git add README.md
                         git commit -m "first commit"
-                        git remote add origin git@github.com:pablinn/death-note.git
+                        git remote add origin git@github.com:pablinn/$folder.git
                         git push -u -f origin master
                         read;;
                   g-up)
@@ -516,7 +519,7 @@ do
                               
                       git add $path$file
                       echo -n $path$file
-                      git commit -m "Agregando archivo"$path$file
+                      git commit -m "Agregando archivo"
                       git push -f origin master
                       read;;
                esac;;
