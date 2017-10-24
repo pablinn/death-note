@@ -14,3 +14,4 @@ wpa --> aun no terminado iw crunch aircrack (posiblemente agregue KRACK con scap
 
 y otros...
 
+# prueba
