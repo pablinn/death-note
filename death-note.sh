@@ -15,22 +15,24 @@ normal=$(tput sgr0)
 while :
 do
     clear
-    printf "\t$blue _______________by error-system____________\n"
-    printf "\t$blue Menu principal $0\n"
-    printf "\t___________________________________________\n"
-    printf "\t$red[apk]$normal   Herraientas para APK\n"
-    printf "\t$red[ip]$normal    Herramientas IP      \n"    
-    printf "\t$red[shell]$normal Generador de shellcodes arm | intel\n" 
-    printf "\t$red[enc]$normal   Encriptacion (sha-256 md5 base64) \n"
-    printf "\t$red[api]$normal   Implementacion de API REST (openssl-socket-curl-wget) \n"
-    printf "\t$red[wpa]$normal   Ataques a redes wifi (iw-aircrack-tcdump)\n"
-    printf "\t$red[22]$normal    Buscar exploit en seachdatbase --https://www.exploit-db.com/search/ \n"
-    printf "\t$red[25]$normal    crunch | Aircrack-ng -->Handshake_PCAP \n"
-    printf "\t$red[shut]$normal  Apagado automatico de PC \n"
-    printf "\t$red[exi]$normal   Exit/Stop\n"
-    printf "\t====================================\n"
+    printf "\t$green==========================================================================================\n"
+    printf "\t$red  Menu principal $0\n"
+    printf "\t$red  by error-system\n"
+    printf "\t$green==========================================================================================\n"
+    printf "\t$red[apk]$green    Herraientas para APK\n"
+    printf "\t$red[ip]$green     Herramientas IP      \n"    
+    printf "\t$red[shell]$green  Generador de shellcodes arm | intel\n" 
+    printf "\t$red[enc]$green    Encriptacion (sha-256 md5 base64) \n"
+    printf "\t$red[api]$green    Implementacion de API REST (openssl-socket-curl-wget) \n"
+    printf "\t$red[wpa]$green    Ataques a redes wifi (iw-aircrack-tcdump)\n"
+    printf "\t$red[git]$green    Github Tools\n"
+    printf "\t$red[xploit]$green Buscar exploit en seachdatbase --https://www.exploit-db.com/search/ \n"
+    printf "\t$red[shut]$green   Apagado automatico de PC \n"
+    printf "\t$red[salir]$green  Exit/Stop\n"
+    printf "\t$green==========================================================================================\n"
+    printf "$normal\n"
     
-    echo -n "Entrar opcion [en rojo]:"
+    printf "$green Entrar opcion [*]:$red"
     read opc
     case $opc in
  
@@ -40,12 +42,12 @@ do
         path=${PWD}"/apk/"
         path2=${PWD}"/app/dex2jar-2.0/"
         
-        printf "\t$red[1]$normal Decompilar APK con DEX2JAR\n" 
-        printf "\t$red[2]$normal Compilar APK con DEX2JAR\n"
-        printf "\t$red[3]$normal Decompilar APK con APKTOOL\n"
-        printf "\t$red[4]$normal Compilar APK con APKTOOL\n"
+        printf "\t$red[1]$green Decompilar APK con DEX2JAR\n" 
+        printf "\t$red[2]$green Compilar APK con DEX2JAR\n"
+        printf "\t$red[3]$green Decompilar APK con APKTOOL\n"
+        printf "\t$red[4]$green Compilar APK con APKTOOL\n"
         
-        echo -n "Entrar opcion [1-4]:"
+        printf "$green Entrar opcion [*]:$red"
         read opc2
         case $opc2 in
          1)
@@ -81,14 +83,14 @@ do
  
  # datos de red y anonimato*************************************************************************************************     
       ip) 
-          printf "\t$red[5]$normal  Ver ip publica\n"
-          printf "\t$red[6]$normal  Ver ip publica mas geolocalizacion\n"
-          printf "\t$red[7]$normal  Ver ip Local +  gw + broadcast\n"
-          printf "\t$red[8]$normal  Ver ip local\n"
-          printf "\t$red[11]$normal Ver IP con TOR \n"
-          printf "\t$red[12]$normal Ver IP-geo traves de TOR \n"
+          printf "\t$red[5]$green  Ver ip publica\n"
+          printf "\t$red[6]$green  Ver ip publica mas geolocalizacion\n"
+          printf "\t$red[7]$green  Ver ip Local +  gw + broadcast\n"
+          printf "\t$red[8]$green  Ver ip local\n"
+          printf "\t$red[11]$green Ver IP con TOR \n"
+          printf "\t$red[12]$green Ver IP-geo traves de TOR \n"
           
-          echo -n "Entrar opcion [1-4]:"
+          printf "$green Entrar opcion [*]:$red"
           read opc2
           case $opc2 in
           
@@ -127,13 +129,14 @@ do
 #generacion de shellcode C ASM ************************************************************************************************        
      shell)
           
-          printf "\t$red[13]$normal Desactivar ASLR y NX\n"
-          printf "\t$red[14]$normal Activar ASLR y NX\n"     
-          printf "\t$red[15]$normal Compilar en C\n"
-          printf "\t$red[16]$normal Compilar en Asm\n"
-          printf "\t$red[17]$normal Generar Shellcode\n"
-          printf "\t$red[18]$normal Generar Shellcode para ARM\n"    
-          echo -n "Entrar opcion [1-4]:"
+          printf "\t$red[13]$green Desactivar ASLR y NX\n"
+          printf "\t$red[14]$green Activar ASLR y NX\n"     
+          printf "\t$red[15]$green Compilar en C\n"
+          printf "\t$red[16]$green Compilar en Asm\n"
+          printf "\t$red[17]$green Generar Shellcode\n"
+          printf "\t$red[18]$green Generar Shellcode para ARM\n"    
+          
+          printf "$green Entrar opcion [*]:$red"
           read opc2
           case $opc2 in
           3)
@@ -178,17 +181,16 @@ do
  #encriptacion sha-256 md5 base-64****************************************************************************************   
      enc) 
           
-          printf "\t$red[256]$normal    Generador de hash sha256-->\n"
-          printf "\t$red[512]$normal    Generador de hash sha512 -->\n"
-          printf "\t$red[md5]$normal    Generador de hash md5 -->\n"
-          printf "\t$red[b64e]$normal   Generador de hash base 64 encode-->\n"
-          printf "\t$red[b64d]$normal   Generador de hash base 64 decode -->\n"
-          printf "\t$red[aese]$normal   Generador de hash openssl aes encode-->\n"
-          printf "\t$red[aesd]$normal   Generador de hash openssl aes decode -->\n"
-          printf "\t$red[rsa]$normal    ssh-keygen hash para github -->\n"
+          printf "\t$red[256]$green    Generador de hash sha256-->\n"
+          printf "\t$red[512]$green    Generador de hash sha512 -->\n"
+          printf "\t$red[md5]$green    Generador de hash md5 -->\n"
+          printf "\t$red[b64e]$green   Generador de hash base 64 encode-->\n"
+          printf "\t$red[b64d]$green   Generador de hash base 64 decode -->\n"
+          printf "\t$red[aese]$green   Generador de hash openssl aes encode-->\n"
+          printf "\t$red[aesd]$green   Generador de hash openssl aes decode -->\n"
+          printf "\t$red[rsa]$green    ssh-keygen hash para github -->\n"
           
-          echo -n "Entrar opcion [*]:"
-          
+          printf "$green Entrar opcion [*]:$red"
           read opc2
           case $opc2 in
            256) 
@@ -253,15 +255,15 @@ do
            
           esac;;
 #bash socket experimental inestable**********************************************************************************                    
-  #dig ss whois nbtstat socat tor-resolve nmap smbclient -L ip  printf "%x\n" $ echo $((16#FF))    
+#dig ss whois nbtstat socat tor-resolve nmap smbclient -L ip  printf "%x\n" $ echo $((16#FF))    
       api) 
-          printf "\t$blue Bash Socket experimental inestable\n"
-          printf "\t$red[owm]$normal   API OpenWeatherMap clima\n"
-          printf "\t$red[geo]$normal   API Geolocalizacion de google\n"
-          printf "\t$red[sock]$normal  Bash Socket para pruebas\n"
-          printf "\t$red[modbus]$normal  modbus-tcp experimental\n"
-          echo -n "Entrar opcion [*]:"
+          printf "\t$cyan Bash Socket experimental inestable\n"
+          printf "\t$red[owm]$green     API OpenWeatherMap clima\n"
+          printf "\t$red[geo]$green     API Geolocalizacion de google\n"
+          printf "\t$red[sock]$green    Bash Socket para pruebas\n"
+          printf "\t$red[modbus]$green  Modbus-Tcp experimental\n"
           
+          printf "$green Entrar opcion [*]:$red"
           read opc2
           case $opc2 in
           owm)
@@ -333,14 +335,14 @@ do
              
 #ataques wep/wpa/wpa2*****************************************************************************************************************************     
           wpa)
-                printf "\t$blue Bash Socket experimental inestable\n"
-                printf "\t$red[infw]$normal   Informacion de redes wifi\n"
-                printf "\t$red[mon_man]$normal Pasar de modo monitor a modo managed\n"
-                printf "\t$red[man_mon]$normal Pasar de modo managed a monitor\n"
-                printf "\t$red[modbus]$normal  modbus-tcp experimental\n"
-                echo -n "Entrar opcion [*]:"
+                
+                printf "\t$red[infw]$green   Informacion de redes wifi\n"
+                printf "\t$red[mon_man]$green Pasar de modo monitor a modo managed\n"
+                printf "\t$red[man_mon]$green Pasar de modo managed a monitor\n"
+                
           
-                read opc2
+          printf "$green Entrar opcion [*]:$red"
+          read opc2
           case $opc2 in
           
            mon_man)
@@ -410,17 +412,29 @@ do
                                 
                 read;; 
                 
-                
-          wifi)
+            wpa2c)
+     
+                  min=8
+                  max=10
+                  charset=${PWD}"/charset/charset.lst"
+                  patron=mixalpha-numeric-symbol14
+                  patron_min=lalpha
+                  patron_num=numeric
+                  aircrack=aircrack-ng
+                  #crunch $min $max $charset $ataque
+                  path=${PWD}"/hs/"
+                  printf "Ingrse el BSID -->"
+                  read bsid;
+                  printf "Ingrse el handshake pcap -->"
+                  read pcap;
+     
+                  #crunch 8 10 123456789 | aircrack-ng -b D4:6E:0E:54:F8:E6 -w- E-54-F8-E6.cap
+                  crunch $min $max -f $charset $patron_min -d 2@ | aircrack-ng -b $bsid -w- $path$pcap.cap
+                  read;;      
+           wifi)
               printf "Ingrese la interface iface -->" 
               read iface
-              #printf "Ingrse el remote port rport -->" 
-              #read canales
-              #iw <interface> link | grep SSID | awk '{print '$2'}' | sed -u -e 's/SSID: //'
               
-              #interfaces wifi 
-              #iw dev |grep Interface  | awk -F"[\t]" {'print $2'}|sed -u -e 's/Interface //'
- 
                
                canal1=2412
                canal2=2417
@@ -457,8 +471,58 @@ do
                rfkill list
                rfkill unblock 0
                read;;
+               
+            air)
+                 airmon-ng start wlan0
+                 airodump-ng mon0
+                 airplay-ng -0 5 -a mac_ap -c mac_cli wlan0
+                 airdecap-ng
+                 airolib-ng
+                 airotun-ng
+                 airbase-ng
+                 read;;   
+               
             esac;;
             
+#*******************************************************************************************************************************            
+            git)
+                path=${PWD}"/"
+                
+                printf "\t$red[g-ini]$normal  GIT INIT\n"
+                printf "\t$red[g-rm]$normal   GIT RM\n"
+                printf "\t$red[g-up]$normal   GIT PUSH\n"
+                
+                printf "$green Entrar opcion [*]:$red"
+                read opc2
+                case $opc2 in
+                   g-rm)
+                        printf "Ingrese la carpeta a eliminar -->" 
+                        read folder 
+                        git rm --cached $path$folder -r
+                        git commit -m "eliminando...."
+                        git push -f origin master
+                        read;;
+                   g-ini)
+                        echo "# prueba" >> README.md
+                        git init
+                        git add README.md
+                        git commit -m "first commit"
+                        git remote add origin git@github.com:pablinn/death-note.git
+                        git push -u -f origin master
+                        read;;
+                  g-up)
+                      printf "Ingrese la carpeta a eliminar -->" 
+                      read folder 
+                              
+                      git add $path$file
+                      echo -n $path$file
+                      git commit -m "Agregando archivo"$path$file
+                      git push -f origin master
+                      read;;
+               esac;;
+                
+                
+    
 #*******************************************************************************************************************************            
     9)
       gcc -dumpmachine      
@@ -469,26 +533,7 @@ do
        cat /proc/cpuinfo
        read;;
    
-    git)
-    
-    #inicio
-    echo "# prueba" >> README.md
-    git init
-    git add README.md
-    git commit -m "first commit"
-    git remote add origin git@github.com:pablinn/death-note.git
-    git push -u -f origin master
-
-    #update
-    git add file
-    git commit -m "first commit"
-    #git remote add origin git@github.com:pablinn/death-note.git
-    git push -f origin master
-
-
-    read;;
-    
-    22)
+    xploit)
         printf "Ingrese plataforma windows linux arm android -->" 
         read plat
         printf "Ingrese programa ej pdf -->" 
@@ -496,53 +541,7 @@ do
        
         searchsploit $prg $plat -w -t
         read;;
-    
-    
-       
-    
            
-       
-    25)  
-     
-      min=8
-      max=10
-      charset=${PWD}"/charset/charset.lst"
-      patron=mixalpha-numeric-symbol14
-      
-      patron_min=lalpha
-      patron_num=numeric
-      
-      aircrack=aircrack-ng
-      #crunch $min $max $charset $ataque
-      
-      path=${PWD}"/hs/"
-      
-     printf "Ingrse el BSID -->"
-     read bsid;
-     printf "Ingrse el handshake pcap -->"
-     read pcap;
-     
-     #printf "Ingrese regla de caracteres para crunch 8 8 0123465789"
-    #read regla;
-    #printf "Ingrese longitud inicial -->"
-    #read len_i;
-    #printf "Ingrese longitud final -->"
-    #read len_f;
-    
-     #crunch 8 10 123456789 | aircrack-ng -b D4:6E:0E:54:F8:E6 -w- E-54-F8-E6.cap
-     crunch $min $max -f $charset $patron_min -d 2@ | aircrack-ng -b $bsid -w- $path$pcap.cap
-     read;;
-     
-    40)
-       airmon-ng start wlan0
-       airodump-ng mon0
-       airplay-ng -0 5 -a mac_ap -c mac_cli wlan0
-       airdecap-ng
-       airolib-ng
-       airotun-ng
-       airbase-ng
-       
-       read;;
 #***************************************************************************************************    
     shut)
         printf "Apagado automatico Ingrese la cantidad de minutos -->" 
@@ -550,7 +549,7 @@ do
         shutdown -h +$min
         read;;
               
-    exi) exit 0 ;;
+    salir) exit 0 ;;
     
     *) printf "ohhhh!!! Selecciona unba opcion del menu :)";
        printf "Presiona una tecla...";
