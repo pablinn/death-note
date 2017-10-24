@@ -511,8 +511,8 @@ do
                         git push -u -f origin master
                         read;;
                   g-up)
-                      printf "Ingrese la carpeta a eliminar -->" 
-                      read folder 
+                      printf "Ingrese el archivo a comitear-->" 
+                      read file
                               
                       git add $path$file
                       echo -n $path$file
